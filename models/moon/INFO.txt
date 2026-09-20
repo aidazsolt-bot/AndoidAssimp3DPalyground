@@ -36,4 +36,4 @@ copyrighted web downloads.
 
 Use: enable Diffuse + Specular + Specular-Map + Bump + Normal maps.
 
-Preview: preview.png — emulator still (Vulkan SceneViewer).
+Shots: shots/01.png … 10.png — emulator orbit stills (Vulkan SceneViewer).

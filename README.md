@@ -10,24 +10,31 @@ textures where applicable, plus a short `INFO.txt`.
 
 ```
 models/
-  earth/          Earth globe — albedo, bump, normal, specular + preview.png
-  moon/           Moon globe — NASA SVS CGI Moon Kit maps + preview.png
-  scifi-orb/      Multi-material sci-fi orb (materials only) + preview.png
-  clock-sample/   POV clock scene + moon prop + preview.png
+  earth/          Earth globe — albedo, bump, normal, specular + shots/
+  moon/           Moon globe — NASA SVS CGI Moon Kit maps + shots/
+  scifi-orb/      Multi-material sci-fi orb (materials only) + shots/
+  clock-sample/   POV clock scene + moon prop + shots/
 tools/
   obj_to_3ds.py   Small OBJ→3DS helper used for Earth / Moon
 ```
 
-| Model | OBJ / MTL | 3DS | Maps | Preview |
-|-------|-----------|-----|------|---------|
-| Earth | yes | yes | albedo, bump, normal, specular | [preview.png](models/earth/preview.png) |
-| Moon | yes | yes | albedo, bump, normal, specular | [preview.png](models/moon/preview.png) |
-| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [preview.png](models/scifi-orb/preview.png) |
-| ClockSample | yes | yes | checker, stripe, Moon_* | [preview.png](models/clock-sample/preview.png) |
+| Model | OBJ / MTL | 3DS | Maps | Shots |
+|-------|-----------|-----|------|-------|
+| Earth | yes | yes | albedo, bump, normal, specular | [01](models/earth/shots/01.png) … [10](models/earth/shots/10.png) ([folder](models/earth/shots/)) |
+| Moon | yes | yes | albedo, bump, normal, specular | [01](models/moon/shots/01.png) … [10](models/moon/shots/10.png) ([folder](models/moon/shots/)) |
+| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [01](models/scifi-orb/shots/01.png) … [10](models/scifi-orb/shots/10.png) ([folder](models/scifi-orb/shots/)) |
+| ClockSample | yes | yes | checker, stripe, Moon_* | [01](models/clock-sample/shots/01.png) … [10](models/clock-sample/shots/10.png) ([folder](models/clock-sample/shots/)) |
 
-Previews are emulator screenshots from the Vulkan SceneViewer (orbit). How they
-were captured — and that this pack grew out of an **AI-assisted** Android/Assimp
-lighting workflow — is under [How the previews were made](#how-the-previews-were-made).
+### Orbit stills (representative)
+
+| Earth | Moon | SciFi orb | ClockSample |
+|-------|------|-----------|-------------|
+| [![Earth](models/earth/shots/05.png)](models/earth/shots/) | [![Moon](models/moon/shots/05.png)](models/moon/shots/) | [![SciFi](models/scifi-orb/shots/05.png)](models/scifi-orb/shots/) | [![Clock](models/clock-sample/shots/05.png)](models/clock-sample/shots/) |
+
+Each model has **10** emulator screenshots (`shots/01.png`–`10.png`) from the
+Vulkan SceneViewer (orbit auto-spin). How they were captured — and that this
+pack grew out of an **AI-assisted** Android/Assimp lighting workflow — is under
+[How the shots were made](#how-the-shots-were-made).
 (Emulator MP4s were dropped: headless `screenrecord` was too janky to keep.)
 
 ## Quick start
@@ -44,7 +51,7 @@ lighting workflow — is under [How the previews were made](#how-the-previews-we
 - 3DS: same, but expect **generated** mesh normals (no NORMALS chunk); bump /
   height and specular maps are present for Earth, Moon, and ClockSample’s moon.
 
-## How the previews were made
+## How the shots were made
 
 These stills are **not** offline renders. They come from the same Vulkan
 SceneViewer used while iterating Earth/Moon specular, sunglint, and normal maps
@@ -54,7 +61,7 @@ a real Assimp → Vulkan path — the kind of check that showed up repeatedly wh
 doing that AI-related lighting/asset work.
 
 Short-lived emulator MP4s (`adb screenrecord` + orbit swipes) were recorded the
-same way, but they stuttered badly on the headless AVD, so only the PNG frames
+same way, but they stuttered badly on the headless AVD, so only PNG frames
 remain in the repo.
 
 ### Pipeline (short)
@@ -68,9 +75,9 @@ remain in the repo.
    `custom_obj_path` → `Earth.obj` / `Moon.obj` / `SciFiOrb.obj` /
    `ClockSample.obj`, material/map toggles on, `camera_engine=orbit`), then
    start the viewer again.
-5. Capture a frame (historically via mid-clip extract from a 10 s
-   `screenrecord`; a plain `adb exec-out screencap -p` works the same).
-6. Store as `models/<name>/preview.png`.
+5. Wait for orbit auto-spin, then capture **10** frames over ~25 s via
+   `adb exec-out screencap -p` (AVD at 1440×3120).
+6. Store as `models/<name>/shots/01.png` … `10.png`.
 
 Helper scripts for start/install/stop on this host live under the parent
 workspace skill `emulator-adb-workflow` (not required to use the model files

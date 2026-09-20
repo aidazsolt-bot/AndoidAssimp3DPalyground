@@ -21,4 +21,4 @@ Use
   Open SciFiOrb.obj or SciFiOrb.3DS. No textures required. Enable specular
   lighting to see metal highlights; emissive materials light the glow accents.
 
-Preview: preview.png — emulator still (Vulkan SceneViewer).
+Shots: shots/01.png … 10.png — emulator orbit stills (Vulkan SceneViewer).

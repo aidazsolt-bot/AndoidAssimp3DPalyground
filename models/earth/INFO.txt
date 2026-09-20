@@ -31,4 +31,4 @@ Use: open Earth.obj in the file browser; enable Diffuse + Specular + Specular-Ma
 + Bump + Normal maps. Rotate so the key light glances off oceans (sunglint)
 and lights the polar caps (dazzling white albedo).
 
-Preview: preview.png — emulator still (Vulkan SceneViewer).
+Shots: shots/01.png … 10.png — emulator orbit stills (Vulkan SceneViewer).
