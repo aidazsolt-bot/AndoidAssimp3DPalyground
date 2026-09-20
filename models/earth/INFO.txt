@@ -1,0 +1,32 @@
+Earth texture sources (bundled with Earth.obj)
+==============================================
+Formats: Earth.obj + Earth.mtl, Earth.3DS
+
+Earth_albedo.png
+  Based on https://github.com/turban/webgl-earth images/2_no_clouds_4k.jpg
+  (NASA Blue Marble derived; common in open WebGL earth demos)
+
+Earth_bump.png
+  Height/relief derived from NASA Earth Observatory Blue Marble
+  world.topo.bathy.200412.3x5400x2700.jpg (public domain NASA imagery)
+  https://visibleearth.nasa.gov / eoimages.gsfc.nasa.gov
+
+Earth_normal.png
+  mrdoob/three.js examples/textures/planets/earth_normal_2048.jpg (MIT)
+  https://github.com/mrdoob/three.js
+
+Earth_specular.png
+  Base ocean mask: three.js earth_specular_2048.jpg (MIT), then authored
+  layers from albedo + bump:
+    - water: strong cool specular (open ocean)
+    - ice/snow: bright near-white specular (polar ice, sea ice, mountain snow);
+      deserts excluded via warm chroma (R>B)
+    - land: near-matte
+  Multiplies MTL Ks under key/sun light (Blinn-Phong). Cool-bright water
+  texels also drive the shader sunglint term (sharp Fresnel streak).
+  Neutral-bright ice/snow texels drive the high-albedo polar glow (broad
+  diffuse return, not a mirror point).
+
+Use: open Earth.obj in the file browser; enable Diffuse + Specular + Specular-Map
++ Bump + Normal maps. Rotate so the key light glances off oceans (sunglint)
+and lights the polar caps (dazzling white albedo).

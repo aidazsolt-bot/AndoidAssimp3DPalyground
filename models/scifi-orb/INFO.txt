@@ -1,0 +1,22 @@
+SciFiOrb — detailed sci-fi orb (materials only)
+==============================================
+Formats: SciFiOrb.obj + SciFiOrb.mtl, SciFiOrb.3DS
+
+Geometry
+  ~46.8k vertices, ~83.6k triangles. Multi-material hard-surface orb
+  (frame, iris, chrome / copper / gun metal, cyan & amber emissive accents).
+
+Materials (no image maps)
+  Ka / Kd / Ks / Ke / Ns only — designed for Blinn-Phong + emissive.
+  Soft Ke values; engines may pulse emissive over time.
+
+  MetalDark, MetalGun, MetalCopper, MetalChrome, IrisMetal, FrameDark
+  GlowCyan, GlowCyanDeep, GlowCore, GlowAmber, GlowBeacon
+
+Origin
+  Authored for the PingPong / Assimp Android playground (original mesh + MTL).
+  Dedicated to the public domain (CC0 1.0) — see repository LICENSE / ATTRIBUTION.md.
+
+Use
+  Open SciFiOrb.obj or SciFiOrb.3DS. No textures required. Enable specular
+  lighting to see metal highlights; emissive materials light the glow accents.

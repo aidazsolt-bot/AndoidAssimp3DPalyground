@@ -1,0 +1,37 @@
+Moon texture sources (bundled with Moon.obj)
+============================================
+Formats: Moon.obj + Moon.mtl, Moon.3DS
+
+License: public domain (U.S. government / NASA work).
+Source package: NASA Scientific Visualization Studio — CGI Moon Kit (#4720)
+  https://svs.gsfc.nasa.gov/4720
+SVS policy: content is public domain unless otherwise noted
+  https://svs.gsfc.nasa.gov/help/
+NASA media guidelines: https://www.nasa.gov/nasa-brand-center/images-and-media/
+Credit: NASA / GSFC / Scientific Visualization Studio
+  (LROC WAC mosaic + LOLA elevation; see kit page for instrument notes)
+
+Moon_albedo.png  (2048×1024)
+  From SVS `lroc_color_poles_4k.tif` (LROC WAC color + LDAM polar fill).
+  Direct download: …/a004720/lroc_color_poles_4k.tif
+
+Moon_bump.png / Moon_normal.png
+  Height from SVS `ldem_16_uint.tif` (LOLA gridded DEM, 16 px/deg).
+  Bump 0..1 ↔ ~12.3 km relief (p0.5..p99.5), ≈0.71% of R=1737.4 km — OK vs circumference.
+  Normal map: tangent-space from height with strength ≈ span/(2·texel_m) (~1.16),
+  matched to moon radius (was ~8 ≈ 7× exaggerated).
+  Direct download: …/a004720/ldem_16_uint.tif
+  Note: engine HEIGHT shader path is UV/screen-space, not radius-scaled.
+  Underlying LOLA products also archived on NASA PDS (public domain).
+
+Moon_specular.png
+  Soft regolith specular authored locally from the PD albedo (+ slight bump
+  flattening): darker maria slightly higher specular, highlands more matte.
+  Neutral grayscale (no cool water / ice chroma) so Earth sunglint / ice-albedo
+  shader terms do not fire. Not a NASA specular product.
+
+Note: Curated downloads on the LROC ASU website (non-PDS) can be copyrighted.
+These bundled maps come from NASA SVS / PDS-derived kit files, not those
+copyrighted web downloads.
+
+Use: enable Diffuse + Specular + Specular-Map + Bump + Normal maps.

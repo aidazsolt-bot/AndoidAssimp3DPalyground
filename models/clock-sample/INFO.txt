@@ -1,0 +1,30 @@
+ClockSample — POV-Ray clock scene sample (OBJ + 3DS)
+====================================================
+Formats: ClockSample.obj + ClockSample.mtl, ClockSample.3DS
+Textures: ClockSample_checker.png, ClockSample_stripe.png,
+          plus Moon_* maps (same files as models/moon/) for the moon prop.
+
+Scene
+  Ground plane (checker), striped clock body/hands, and a moon sphere.
+  Snapshot comment in the OBJ: "# ClockSample.pov snapshot (clock mid, My_Clock=0)".
+
+Materials
+  Checker  — diffuse checker ground (map_Kd ClockSample_checker.png)
+  Stripe   — clock body stripe texture (map_Kd ClockSample_stripe.png)
+  Moon     — same finish/maps as standalone Moon.obj
+             (Moon_albedo / Moon_specular / Moon_bump / Moon_normal)
+
+3DS notes
+  ClockSample.3DS carries diffuse + bump + specular map slots for the Moon
+  material (SPECMAP chunk 0xA204). Place the Moon_*.png files next to the
+  .3DS (already included in this folder).
+
+Origin
+  Mesh/clock layout adapted from a POV-Ray clock sample; checker/stripe maps
+  and packaging authored for this playground. Moon maps: NASA SVS CGI Moon Kit
+  (public domain) — see models/moon/INFO.txt and repository ATTRIBUTION.md.
+  Original authored content: CC0 1.0.
+
+Use
+  Prefer OBJ+MTL for full normal-map support. 3DS is useful for Assimp /
+  legacy viewers (normals often generated; no separate NORMALS chunk).

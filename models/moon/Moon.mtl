@@ -1,0 +1,13 @@
+newmtl MoonSurface
+Ka 0.45 0.45 0.45
+Kd 0.75 0.75 0.72
+# Soft regolith — keep glitter subtle under key light
+Ks 0.08 0.08 0.07
+Ns 14
+d 1.0
+map_Kd Moon_albedo.png
+map_Ks Moon_specular.png
+bump Moon_bump.png
+map_bump Moon_bump.png
+norm Moon_normal.png
+map_Kn Moon_normal.png

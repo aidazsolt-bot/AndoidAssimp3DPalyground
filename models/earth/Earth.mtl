@@ -1,0 +1,15 @@
+# Earth materials — CC/public NASA-derived maps (see Earth.obj header)
+newmtl EarthSurface
+Ka 0.15 0.16 0.20
+Kd 0.85 0.85 0.88
+# Ks × map_Ks: water drives sunglint; ice → high-albedo term; land ≈ matte.
+# Ns = Blinn exponent for residual (non-glint) lobe; oceans fade Blinn in shader.
+Ks 0.42 0.48 0.55
+Ns 64
+d 1.0
+map_Kd Earth_albedo.png
+map_Ks Earth_specular.png
+bump Earth_bump.png
+map_bump Earth_bump.png
+norm Earth_normal.png
+map_Kn Earth_normal.png
