@@ -26,7 +26,9 @@ tools/
 | ClockSample | yes | yes | checker, stripe, Moon_* | [preview.png](models/clock-sample/preview.png) | [preview.mp4](models/clock-sample/preview.mp4) (~10 s) |
 
 Previews were recorded on an Android emulator (Vulkan SceneViewer, orbit camera).
-PNG stills are mid-clip frames from those videos.
+PNG stills are mid-clip frames from those videos. How that was done — and that
+this pack grew out of an **AI-assisted** Android/Assimp lighting workflow — is
+documented under [How the previews were made](#how-the-previews-were-made).
 
 ## Quick start
 
@@ -41,6 +43,36 @@ PNG stills are mid-clip frames from those videos.
 - OBJ: enable diffuse + specular + specular-map + bump/height + normals.
 - 3DS: same, but expect **generated** mesh normals (no NORMALS chunk); bump /
   height and specular maps are present for Earth, Moon, and ClockSample’s moon.
+
+## How the previews were made
+
+These stills and clips are **not** offline renders. They come from the same
+Vulkan SceneViewer used while iterating Earth/Moon specular, sunglint, and
+normal maps in an **AI-assisted coding session** (Cursor agent + human review
+on a headless Android/NDK host). The goal was a quick, honest look at how the
+meshes light in a real Assimp → Vulkan path — the kind of check that showed up
+repeatedly while doing that AI-related lighting/asset work.
+
+### Pipeline (short)
+
+1. Start AVD `medium_phone` **headless** (`emulator -avd medium_phone -no-audio -no-window`).
+2. Install the debug APK of **PingPong2026Assimp** (debuggable so prefs can be
+   written via `run-as`).
+3. Launch `.SceneViewerActivity` once so `assets/bundled_models/` extract under
+   the app’s `files/bundled_models/`.
+4. For each model, force-stop the app, write SharedPreferences (`mesh_id=6` +
+   `custom_obj_path` → `Earth.obj` / `Moon.obj` / `SciFiOrb.obj` /
+   `ClockSample.obj`, material/map toggles on, `camera_engine=orbit`), then
+   start the viewer again.
+5. Record with `adb shell screenrecord --time-limit 10` while sending orbit
+   swipes (`adb shell input swipe …`) so the clip shows turning lighting, not a
+   static pose.
+6. Pull the MP4s into `models/<name>/preview.mp4`.
+7. Extract mid-clip frames to `preview.png` (no second emulator pass).
+
+Helper scripts for start/install/stop on this host live under the parent
+workspace skill `emulator-adb-workflow` (not required to use the model files
+themselves).
 
 ## Licensing
 
