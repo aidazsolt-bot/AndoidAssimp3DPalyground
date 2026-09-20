@@ -1,7 +1,7 @@
 # Android Assimp 3D Playground — Models
 
 Public sample pack of **Earth**, **Moon**, **SciFi orb**, and **ClockSample**
-models for Assimp-based viewers and Android / OpenGL ES playgrounds.
+models for Assimp-based viewers and Android / Vulkan playgrounds.
 
 Each model ships as **Wavefront OBJ + MTL** and **Discreet 3DS**, with maps /
 textures where applicable, plus a short `INFO.txt`.

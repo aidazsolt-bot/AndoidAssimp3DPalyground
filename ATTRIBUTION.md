@@ -1,6 +1,6 @@
 # Attribution & third-party sources
 
-This repository packages ready-to-load 3D models for Assimp / OpenGL ES
+This repository packages ready-to-load 3D models for Assimp / Vulkan
 playgrounds. Original meshes, MTL finishes, authored specular layers, docs,
 and packaging are dedicated to the **public domain (CC0 1.0)** — see `LICENSE`.
 
