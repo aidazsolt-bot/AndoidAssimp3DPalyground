@@ -33,7 +33,7 @@ tools/
 
 | Earth | Moon | SciFi orb | ClockSample | BusterDrone |
 |-------|------|-----------|-------------|-------------|
-| [![Earth](models/earth/shots/05.png)](models/earth/shots/) | [![Moon](models/moon/shots/05.png)](models/moon/shots/) | [![SciFi](models/scifi-orb/shots/05.png)](models/scifi-orb/shots/) | [![Clock](models/clock-sample/shots/02.png)](models/clock-sample/shots/) | [![Buster](models/buster-drone/shots/07.png)](models/buster-drone/shots/) |
+| [![Earth](models/earth/shots/05.png)](models/earth/shots/) | [![Moon](models/moon/shots/05.png)](models/moon/shots/) | [![SciFi](models/scifi-orb/shots/05.png)](models/scifi-orb/shots/) | [![Clock](models/clock-sample/shots/02.png)](models/clock-sample/shots/) | [![Buster](models/buster-drone/shots/04.png)](models/buster-drone/shots/) |
 
 Each model has **10** emulator screenshots (`shots/01.png`–`10.png`) from the
 Vulkan SceneViewer (orbit auto-spin). How they were captured — and that this
