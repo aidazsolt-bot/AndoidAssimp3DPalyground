@@ -10,25 +10,25 @@ textures where applicable, plus a short `INFO.txt`.
 
 ```
 models/
-  earth/          Earth globe — albedo, bump, normal, specular + preview.mp4
-  moon/           Moon globe — NASA SVS CGI Moon Kit maps + preview.mp4
-  scifi-orb/      Multi-material sci-fi orb (materials only) + preview.mp4
-  clock-sample/   POV clock scene + moon prop + preview.mp4
+  earth/          Earth globe — albedo, bump, normal, specular + preview.png
+  moon/           Moon globe — NASA SVS CGI Moon Kit maps + preview.png
+  scifi-orb/      Multi-material sci-fi orb (materials only) + preview.png
+  clock-sample/   POV clock scene + moon prop + preview.png
 tools/
   obj_to_3ds.py   Small OBJ→3DS helper used for Earth / Moon
 ```
 
-| Model | OBJ / MTL | 3DS | Maps | Still | Video |
-|-------|-----------|-----|------|-------|-------|
-| Earth | yes | yes | albedo, bump, normal, specular | [preview.png](models/earth/preview.png) | [preview.mp4](models/earth/preview.mp4) (~10 s) |
-| Moon | yes | yes | albedo, bump, normal, specular | [preview.png](models/moon/preview.png) | [preview.mp4](models/moon/preview.mp4) (~10 s) |
-| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [preview.png](models/scifi-orb/preview.png) | [preview.mp4](models/scifi-orb/preview.mp4) (~10 s) |
-| ClockSample | yes | yes | checker, stripe, Moon_* | [preview.png](models/clock-sample/preview.png) | [preview.mp4](models/clock-sample/preview.mp4) (~10 s) |
+| Model | OBJ / MTL | 3DS | Maps | Preview |
+|-------|-----------|-----|------|---------|
+| Earth | yes | yes | albedo, bump, normal, specular | [preview.png](models/earth/preview.png) |
+| Moon | yes | yes | albedo, bump, normal, specular | [preview.png](models/moon/preview.png) |
+| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [preview.png](models/scifi-orb/preview.png) |
+| ClockSample | yes | yes | checker, stripe, Moon_* | [preview.png](models/clock-sample/preview.png) |
 
-Previews were recorded on an Android emulator (Vulkan SceneViewer, orbit camera).
-PNG stills are mid-clip frames from those videos. How that was done — and that
-this pack grew out of an **AI-assisted** Android/Assimp lighting workflow — is
-documented under [How the previews were made](#how-the-previews-were-made).
+Previews are emulator screenshots from the Vulkan SceneViewer (orbit). How they
+were captured — and that this pack grew out of an **AI-assisted** Android/Assimp
+lighting workflow — is under [How the previews were made](#how-the-previews-were-made).
+(Emulator MP4s were dropped: headless `screenrecord` was too janky to keep.)
 
 ## Quick start
 
@@ -46,12 +46,16 @@ documented under [How the previews were made](#how-the-previews-were-made).
 
 ## How the previews were made
 
-These stills and clips are **not** offline renders. They come from the same
-Vulkan SceneViewer used while iterating Earth/Moon specular, sunglint, and
-normal maps in an **AI-assisted coding session** (Cursor agent + human review
-on a headless Android/NDK host). The goal was a quick, honest look at how the
-meshes light in a real Assimp → Vulkan path — the kind of check that showed up
-repeatedly while doing that AI-related lighting/asset work.
+These stills are **not** offline renders. They come from the same Vulkan
+SceneViewer used while iterating Earth/Moon specular, sunglint, and normal maps
+in an **AI-assisted coding session** (Cursor agent + human review on a headless
+Android/NDK host). The goal was a quick, honest look at how the meshes light in
+a real Assimp → Vulkan path — the kind of check that showed up repeatedly while
+doing that AI-related lighting/asset work.
+
+Short-lived emulator MP4s (`adb screenrecord` + orbit swipes) were recorded the
+same way, but they stuttered badly on the headless AVD, so only the PNG frames
+remain in the repo.
 
 ### Pipeline (short)
 
@@ -64,11 +68,9 @@ repeatedly while doing that AI-related lighting/asset work.
    `custom_obj_path` → `Earth.obj` / `Moon.obj` / `SciFiOrb.obj` /
    `ClockSample.obj`, material/map toggles on, `camera_engine=orbit`), then
    start the viewer again.
-5. Record with `adb shell screenrecord --time-limit 10` while sending orbit
-   swipes (`adb shell input swipe …`) so the clip shows turning lighting, not a
-   static pose.
-6. Pull the MP4s into `models/<name>/preview.mp4`.
-7. Extract mid-clip frames to `preview.png` (no second emulator pass).
+5. Capture a frame (historically via mid-clip extract from a 10 s
+   `screenrecord`; a plain `adb exec-out screencap -p` works the same).
+6. Store as `models/<name>/preview.png`.
 
 Helper scripts for start/install/stop on this host live under the parent
 workspace skill `emulator-adb-workflow` (not required to use the model files
