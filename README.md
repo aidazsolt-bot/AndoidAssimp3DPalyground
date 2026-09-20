@@ -18,15 +18,15 @@ tools/
   obj_to_3ds.py   Small OBJ→3DS helper used for Earth / Moon
 ```
 
-| Model | OBJ / MTL | 3DS | Maps | Preview |
-|-------|-----------|-----|------|---------|
-| Earth | yes | yes | albedo, bump, normal, specular | [preview.mp4](models/earth/preview.mp4) (~10 s) |
-| Moon | yes | yes | albedo, bump, normal, specular | [preview.mp4](models/moon/preview.mp4) (~10 s) |
-| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [preview.mp4](models/scifi-orb/preview.mp4) (~10 s) |
-| ClockSample | yes | yes | checker, stripe, Moon_* | [preview.mp4](models/clock-sample/preview.mp4) (~10 s) |
+| Model | OBJ / MTL | 3DS | Maps | Still | Video |
+|-------|-----------|-----|------|-------|-------|
+| Earth | yes | yes | albedo, bump, normal, specular | [preview.png](models/earth/preview.png) | [preview.mp4](models/earth/preview.mp4) (~10 s) |
+| Moon | yes | yes | albedo, bump, normal, specular | [preview.png](models/moon/preview.png) | [preview.mp4](models/moon/preview.mp4) (~10 s) |
+| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [preview.png](models/scifi-orb/preview.png) | [preview.mp4](models/scifi-orb/preview.mp4) (~10 s) |
+| ClockSample | yes | yes | checker, stripe, Moon_* | [preview.png](models/clock-sample/preview.png) | [preview.mp4](models/clock-sample/preview.mp4) (~10 s) |
 
-Previews were recorded on an Android emulator (Vulkan SceneViewer, orbit camera)
-so you can see lighting / maps without loading the meshes first.
+Previews were recorded on an Android emulator (Vulkan SceneViewer, orbit camera).
+PNG stills are mid-clip frames from those videos.
 
 ## Quick start
 

@@ -29,4 +29,4 @@ Use
   Prefer OBJ+MTL for full normal-map support. 3DS is useful for Assimp /
   legacy viewers (normals often generated; no separate NORMALS chunk).
 
-Preview: preview.mp4 — ~10s emulator capture (Vulkan SceneViewer, orbit).
+Preview: preview.png (still) + preview.mp4 (~10s emulator capture, Vulkan SceneViewer, orbit).
