@@ -10,20 +10,23 @@ textures where applicable, plus a short `INFO.txt`.
 
 ```
 models/
-  earth/          Earth globe — albedo, bump, normal, specular
-  moon/           Moon globe — NASA SVS CGI Moon Kit maps
-  scifi-orb/      Multi-material sci-fi orb (materials only, no maps)
-  clock-sample/   POV clock scene + moon prop (self-contained maps)
+  earth/          Earth globe — albedo, bump, normal, specular + preview.mp4
+  moon/           Moon globe — NASA SVS CGI Moon Kit maps + preview.mp4
+  scifi-orb/      Multi-material sci-fi orb (materials only) + preview.mp4
+  clock-sample/   POV clock scene + moon prop + preview.mp4
 tools/
   obj_to_3ds.py   Small OBJ→3DS helper used for Earth / Moon
 ```
 
-| Model | OBJ / MTL | 3DS | Maps |
-|-------|-----------|-----|------|
-| Earth | yes | yes | albedo, bump, normal, specular |
-| Moon | yes | yes | albedo, bump, normal, specular |
-| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) |
-| ClockSample | yes | yes | checker, stripe, Moon_* |
+| Model | OBJ / MTL | 3DS | Maps | Preview |
+|-------|-----------|-----|------|---------|
+| Earth | yes | yes | albedo, bump, normal, specular | [preview.mp4](models/earth/preview.mp4) (~10 s) |
+| Moon | yes | yes | albedo, bump, normal, specular | [preview.mp4](models/moon/preview.mp4) (~10 s) |
+| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [preview.mp4](models/scifi-orb/preview.mp4) (~10 s) |
+| ClockSample | yes | yes | checker, stripe, Moon_* | [preview.mp4](models/clock-sample/preview.mp4) (~10 s) |
+
+Previews were recorded on an Android emulator (Vulkan SceneViewer, orbit camera)
+so you can see lighting / maps without loading the meshes first.
 
 ## Quick start
 
