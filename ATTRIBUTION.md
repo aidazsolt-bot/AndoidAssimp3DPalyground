@@ -45,6 +45,26 @@ maps and packaging authored here (**CC0**). Moon prop uses the same NASA SVS
 maps as `models/moon/` (public domain) — copies are included so the folder is
 self-contained.
 
+## BusterDrone (`models/buster-drone/`)
+
+**Mesh and textures are not redistributed** in this repository (CC BY-NC,
+large glTF + maps). This folder only has `INFO.txt` and orbit `shots/` from
+PingPong2026Assimp’s metallic-roughness path.
+
+| Item | Source | Terms |
+|------|--------|--------|
+| `scene.gltf` / `scene.bin` / `textures/` | [google/filament](https://github.com/google/filament) `third_party/models/BusterDrone` | **CC BY-NC** (Filament README: LaVADraGoN / Sketchfab; concept Evil Cloud — “Dune Express”) |
+| Author page | Sketchfab — search “Buster Drone” / LaVADraGoN | Same CC BY-NC |
+| `INFO.txt`, `shots/*.png` | Docs + emulator stills for this playground | CC0 documentation |
+
+Upstream links:
+
+- https://github.com/google/filament/tree/main/third_party/models/BusterDrone  
+- Tag example: https://github.com/google/filament/tree/v1.77.0/third_party/models/BusterDrone  
+
+**Non-commercial use only** for the model; attribute LaVADraGoN / Evil Cloud when
+you redistribute those files yourself.
+
 ---
 
 ## Suggested credit line
@@ -52,3 +72,5 @@ self-contained.
 > Earth / Moon textures include NASA public-domain imagery (Blue Marble /
 > SVS CGI Moon Kit). Earth normal map and specular base from three.js (MIT).
 > Meshes and authored materials: CC0 1.0.
+> BusterDrone (if used): CC BY-NC — LaVADraGoN / Sketchfab via Filament
+> `third_party/models/BusterDrone`; not shipped in this pack.

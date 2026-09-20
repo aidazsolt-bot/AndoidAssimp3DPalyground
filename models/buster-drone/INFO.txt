@@ -1,0 +1,42 @@
+BusterDrone — glTF sample (links only; no mesh in this pack)
+============================================================
+Formats in upstream: scene.gltf + scene.bin + textures/
+  (Filament ships Draco-compressed glTF; Assimp needs ASSIMP_BUILD_DRACO
+   or a Draco-decoded copy.)
+
+This playground folder does **not** redistribute the model files (license /
+size). Get them from Google Filament or Sketchfab — see links below.
+
+Geometry / materials (when loaded)
+  Animated hard-surface drone (legs, turbines, blades, panels, emissive eye).
+  PBR metallic-roughness: baseColor, metallicRoughness (G=rough, B=metal),
+  normals, emissive maps. Rest pose works without animation; spinning
+  propellers / actuators need glTF animation playback (not in the stills).
+
+Origin / license
+  Model by LaVADraGoN (Sketchfab); concept “Dune Express” with Evil Cloud.
+  License: Creative Commons Attribution-NonCommercial (CC BY-NC).
+  Packaged for demos in Google Filament `third_party/models/BusterDrone`.
+  Non-commercial use only — attribute the authors when redistributing.
+
+Where to get the files
+  Filament tree (canonical for this playground):
+    https://github.com/google/filament/tree/main/third_party/models/BusterDrone
+  Same path on a release tag, e.g. v1.77.0:
+    https://github.com/google/filament/tree/v1.77.0/third_party/models/BusterDrone
+  Filament README in that folder documents Sketchfab / CC BY-NC and Draco.
+
+  Sketchfab (author / original publish):
+    Search “Buster Drone” by LaVADraGoN on https://sketchfab.com/
+
+Use with Assimp / PingPong2026Assimp
+  - Enable glTF importer + Draco (or decode with gltf-transform / similar).
+  - Bake node transforms (`aiProcess_PreTransformVertices`) so turbines/blades
+    sit in world space.
+  - Shade metallic-roughness (Cook-Torrance), not Blinn-only — baseColor + MR
+    + emissive maps.
+  - Keep `scene.bin` and `textures/` next to `scene.gltf`.
+
+Shots: shots/01.png … 10.png — emulator orbit stills (Vulkan SceneViewer /
+PingPong2026Assimp PBR path). Model was loaded from a local Filament checkout;
+these PNGs are documentation only, not a substitute for the glTF.
