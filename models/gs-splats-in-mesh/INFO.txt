@@ -16,7 +16,7 @@ If only the mesh is AABB-framed and splats stay raw, the cube looks tiny beside
 an off-center splat cloud — that is a host framing bug, not this asset's intent.
 
 Shots (documentation only; model not shipped)
-  01_cheap.png   - RenderAssimp desktop Vulkan, Gaussian pipe=Cheap
-                   (splatotopoint / ellipsoid-fill billboards; NOT reference quality)
-  02_khronos.png - same viewer with --gaussian=khronos (KHR_gaussian_splatting
-                   ellipse / Sample-Viewer-style). Prefer this for "how it should look".
+  cheap/01.png … 10.png   - RenderAssimp desktop Vulkan orbit (270 deg), pipe=Cheap
+                            (splatotopoint / ellipsoid-fill; NOT reference quality)
+  khronos/01.png … 10.png - same orbit with --gaussian=khronos (KHR_gaussian_splatting
+                            ellipse / Sample-Viewer-style). Prefer for "how it should look".

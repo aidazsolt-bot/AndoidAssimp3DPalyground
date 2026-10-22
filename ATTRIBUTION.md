@@ -55,7 +55,7 @@ PingPong2026Assimp’s metallic-roughness path.
 |------|--------|--------|
 | `scene.gltf` / `scene.bin` / `textures/` | [google/filament](https://github.com/google/filament) `third_party/models/BusterDrone` | **CC BY-NC** (Filament README: LaVADraGoN / Sketchfab; concept Evil Cloud — “Dune Express”) |
 | Author page | Sketchfab — search “Buster Drone” / LaVADraGoN | Same CC BY-NC |
-| `INFO.txt`, `shots/*.png` | Docs + emulator stills for this playground | CC0 documentation |
+| `INFO.txt`, `shots/cheap|khronos/*.png` | Docs + emulator stills for this playground | CC0 documentation |
 
 Upstream links:
 
@@ -73,8 +73,8 @@ Model bytes (PLY / GLB) are **not** shipped in this repository. Each folder has
 `INFO.txt` with expected filenames and download URLs. `INFO.txt` and playground
 stills are CC0 documentation.
 
-Stills: `01_cheap.png` = RenderAssimp **Cheap** Gaussian pipe (not reference);
-`02_khronos.png` = **Khronos** / KHR ellipse pipe (prefer for expected look).
+Stills: `shots/cheap/*.png` = RenderAssimp **Cheap** Gaussian pipe (not reference);
+`shots/khronos/*.png` = **Khronos** / KHR ellipse pipe (prefer for expected look).
 
 ### gs-garden-table
 
