@@ -16,5 +16,8 @@ Where to get it
 Load: Assimp PLY + aiGetGaussianSplat (same value-space notes as other
 graphdeco PLYs).
 
-Shots: shots/01.png — desktop Vulkan headless still (documentation only;
-model not shipped).
+Shots (documentation only; model not shipped)
+  01_cheap.png   - RenderAssimp desktop Vulkan, Gaussian pipe=Cheap
+                   (splatotopoint / ellipsoid-fill billboards; NOT reference quality)
+  02_khronos.png - same viewer with --gaussian=khronos (KHR_gaussian_splatting
+                   ellipse / Sample-Viewer-style). Prefer this for "how it should look".

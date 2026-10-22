@@ -34,11 +34,11 @@ tools/
 | SciFi orb | OBJ/MTL, 3DS | none (Ka/Kd/Ks/Ke) | [01](models/scifi-orb/shots/01.png) … [10](models/scifi-orb/shots/10.png) ([folder](models/scifi-orb/shots/)) |
 | ClockSample | OBJ/MTL, 3DS | checker, stripe, Moon_* | [01](models/clock-sample/shots/01.png) … [10](models/clock-sample/shots/10.png) ([folder](models/clock-sample/shots/)) |
 | BusterDrone | **no** (link) | PBR MR upstream | [01](models/buster-drone/shots/01.png) … [10](models/buster-drone/shots/10.png) ([folder](models/buster-drone/shots/)) |
-| gs-garden-table | **no** (link) | — | [01](models/gs-garden-table/shots/01.png) |
-| gs-mesh-in-splats | **no** (link) | — | [01](models/gs-mesh-in-splats/shots/01.png) |
-| gs-splats-in-mesh | **no** (link) | — | [01](models/gs-splats-in-mesh/shots/01.png) |
-| gs-rose | **no** (link) | — | [01](models/gs-rose/shots/01.png) |
-| gs-cactus | **no** (link) | — | [01](models/gs-cactus/shots/01.png) |
+| gs-garden-table | **no** (link) | — | [cheap](models/gs-garden-table/shots/01_cheap.png) / [khronos](models/gs-garden-table/shots/02_khronos.png) |
+| gs-mesh-in-splats | **no** (link) | — | [cheap](models/gs-mesh-in-splats/shots/01_cheap.png) / [khronos](models/gs-mesh-in-splats/shots/02_khronos.png) |
+| gs-splats-in-mesh | **no** (link) | — | [cheap](models/gs-splats-in-mesh/shots/01_cheap.png) / [khronos](models/gs-splats-in-mesh/shots/02_khronos.png) |
+| gs-rose | **no** (link) | — | [cheap](models/gs-rose/shots/01_cheap.png) / [khronos](models/gs-rose/shots/02_khronos.png) |
+| gs-cactus | **no** (link) | — | [cheap](models/gs-cactus/shots/01_cheap.png) / [khronos](models/gs-cactus/shots/02_khronos.png) |
 
 ### Orbit stills (representative)
 
@@ -46,9 +46,21 @@ tools/
 |-------|------|-----------|-------------|-------------|
 | [![Earth](models/earth/shots/05.png)](models/earth/shots/) | [![Moon](models/moon/shots/05.png)](models/moon/shots/) | [![SciFi](models/scifi-orb/shots/05.png)](models/scifi-orb/shots/) | [![Clock](models/clock-sample/shots/02.png)](models/clock-sample/shots/) | [![Buster](models/buster-drone/shots/04.png)](models/buster-drone/shots/) |
 
+Gaussian stills are from **RenderAssimp** desktop Vulkan. Prefer **`02_khronos.png`**
+(KHR ellipse / Sample-Viewer-style). **`01_cheap.png`** is the Cheap
+(`splatotopoint`) pipe — blockier billboards, **not** reference quality.
+
+#### Khronos pipe (reference look)
+
 | Garden table | MeshInSplats | SplatsInMesh | Rose | Cactus |
 |--------------|--------------|--------------|------|--------|
-| [![Garden](models/gs-garden-table/shots/01.png)](models/gs-garden-table/shots/) | [![MeshInSplats](models/gs-mesh-in-splats/shots/01.png)](models/gs-mesh-in-splats/shots/) | [![SplatsInMesh](models/gs-splats-in-mesh/shots/01.png)](models/gs-splats-in-mesh/shots/) | [![Rose](models/gs-rose/shots/01.png)](models/gs-rose/shots/) | [![Cactus](models/gs-cactus/shots/01.png)](models/gs-cactus/shots/) |
+| [![Garden KHR](models/gs-garden-table/shots/02_khronos.png)](models/gs-garden-table/shots/) | [![MeshInSplats KHR](models/gs-mesh-in-splats/shots/02_khronos.png)](models/gs-mesh-in-splats/shots/) | [![SplatsInMesh KHR](models/gs-splats-in-mesh/shots/02_khronos.png)](models/gs-splats-in-mesh/shots/) | [![Rose KHR](models/gs-rose/shots/02_khronos.png)](models/gs-rose/shots/) | [![Cactus KHR](models/gs-cactus/shots/02_khronos.png)](models/gs-cactus/shots/) |
+
+#### Cheap pipe (comparison)
+
+| Garden table | MeshInSplats | SplatsInMesh | Rose | Cactus |
+|--------------|--------------|--------------|------|--------|
+| [![Garden Cheap](models/gs-garden-table/shots/01_cheap.png)](models/gs-garden-table/shots/) | [![MeshInSplats Cheap](models/gs-mesh-in-splats/shots/01_cheap.png)](models/gs-mesh-in-splats/shots/) | [![SplatsInMesh Cheap](models/gs-splats-in-mesh/shots/01_cheap.png)](models/gs-splats-in-mesh/shots/) | [![Rose Cheap](models/gs-rose/shots/01_cheap.png)](models/gs-rose/shots/) | [![Cactus Cheap](models/gs-cactus/shots/01_cheap.png)](models/gs-cactus/shots/) |
 
 Each model has **10** emulator screenshots (`shots/01.png`–`10.png`) from the
 Vulkan SceneViewer (orbit auto-spin). How they were captured — and that this
@@ -141,14 +153,16 @@ a soft PD-authored regolith specular. See `models/moon/INFO.txt`.
 stills only here; download the assets from Google’s Filament tree. Animation
 not shown in stills. See `models/buster-drone/INFO.txt`.
 
-**gs-garden-table** — URL for Open3D / mip-NeRF 360 garden crop PLY (not shipped).
+**gs-garden-table** — URL for Open3D / mip-NeRF 360 garden crop PLY (not shipped);
+Cheap + Khronos stills in `shots/`.
 
-**gs-mesh-in-splats / gs-splats-in-mesh** — URLs for javagl KHR mesh+splat GLBs
-plus one desktop still each (docs only).
+**gs-mesh-in-splats / gs-splats-in-mesh** — URLs for javagl KHR mesh+splat GLBs;
+Cheap + Khronos stills (docs only).
 
-**gs-rose** — URL / path hint for Rose.ply (not shipped).
+**gs-rose** — URL / path hint for Rose.ply (not shipped); Cheap + Khronos stills.
 
-**gs-cactus** — URL for CC0 cactus KHR `.glb` / `.ply` ZIP (not shipped).
+**gs-cactus** — URL for CC0 cactus KHR `.glb` / `.ply` ZIP (not shipped);
+Cheap + Khronos stills.
 
 ## Regenerating Earth / Moon `.3DS`
 
