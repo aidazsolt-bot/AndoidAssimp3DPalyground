@@ -18,11 +18,11 @@ models/
   scifi-orb/          Multi-material sci-fi orb (materials only) + shots/
   clock-sample/       POV clock scene + moon prop + shots/
   buster-drone/       INFO + shots only — glTF from Filament / Sketchfab (CC BY-NC)
-  gs-garden-table/    INFO + URL — mip-NeRF 360 garden table PLY
+  gs-garden-table/    INFO + URL + still — mip-NeRF 360 garden table PLY
   gs-mesh-in-splats/  INFO + URL + still — KHR MeshInSplats.glb
   gs-splats-in-mesh/  INFO + URL + still — KHR SplatsInMesh.glb
-  gs-rose/            INFO + URL — Rose.ply
-  gs-cactus/          INFO + URL — cactus KHR .glb / .ply (CC0 upstream)
+  gs-rose/            INFO + URL + still — Rose.ply
+  gs-cactus/          INFO + URL + still — cactus KHR .glb / .ply (CC0 upstream)
 tools/
   obj_to_3ds.py       Small OBJ→3DS helper used for Earth / Moon
 ```
@@ -34,11 +34,11 @@ tools/
 | SciFi orb | OBJ/MTL, 3DS | none (Ka/Kd/Ks/Ke) | [01](models/scifi-orb/shots/01.png) … [10](models/scifi-orb/shots/10.png) ([folder](models/scifi-orb/shots/)) |
 | ClockSample | OBJ/MTL, 3DS | checker, stripe, Moon_* | [01](models/clock-sample/shots/01.png) … [10](models/clock-sample/shots/10.png) ([folder](models/clock-sample/shots/)) |
 | BusterDrone | **no** (link) | PBR MR upstream | [01](models/buster-drone/shots/01.png) … [10](models/buster-drone/shots/10.png) ([folder](models/buster-drone/shots/)) |
-| gs-garden-table | **no** (link) | — | — |
+| gs-garden-table | **no** (link) | — | [01](models/gs-garden-table/shots/01.png) |
 | gs-mesh-in-splats | **no** (link) | — | [01](models/gs-mesh-in-splats/shots/01.png) |
 | gs-splats-in-mesh | **no** (link) | — | [01](models/gs-splats-in-mesh/shots/01.png) |
-| gs-rose | **no** (link) | — | — |
-| gs-cactus | **no** (link) | — | — |
+| gs-rose | **no** (link) | — | [01](models/gs-rose/shots/01.png) |
+| gs-cactus | **no** (link) | — | [01](models/gs-cactus/shots/01.png) |
 
 ### Orbit stills (representative)
 
@@ -46,9 +46,9 @@ tools/
 |-------|------|-----------|-------------|-------------|
 | [![Earth](models/earth/shots/05.png)](models/earth/shots/) | [![Moon](models/moon/shots/05.png)](models/moon/shots/) | [![SciFi](models/scifi-orb/shots/05.png)](models/scifi-orb/shots/) | [![Clock](models/clock-sample/shots/02.png)](models/clock-sample/shots/) | [![Buster](models/buster-drone/shots/04.png)](models/buster-drone/shots/) |
 
-| MeshInSplats | SplatsInMesh |
-|--------------|--------------|
-| [![MeshInSplats](models/gs-mesh-in-splats/shots/01.png)](models/gs-mesh-in-splats/shots/) | [![SplatsInMesh](models/gs-splats-in-mesh/shots/01.png)](models/gs-splats-in-mesh/shots/) |
+| Garden table | MeshInSplats | SplatsInMesh | Rose | Cactus |
+|--------------|--------------|--------------|------|--------|
+| [![Garden](models/gs-garden-table/shots/01.png)](models/gs-garden-table/shots/) | [![MeshInSplats](models/gs-mesh-in-splats/shots/01.png)](models/gs-mesh-in-splats/shots/) | [![SplatsInMesh](models/gs-splats-in-mesh/shots/01.png)](models/gs-splats-in-mesh/shots/) | [![Rose](models/gs-rose/shots/01.png)](models/gs-rose/shots/) | [![Cactus](models/gs-cactus/shots/01.png)](models/gs-cactus/shots/) |
 
 Each model has **10** emulator screenshots (`shots/01.png`–`10.png`) from the
 Vulkan SceneViewer (orbit auto-spin). How they were captured — and that this

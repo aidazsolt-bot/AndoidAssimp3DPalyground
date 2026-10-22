@@ -16,4 +16,5 @@ Where to get it
 Load: Assimp PLY + aiGetGaussianSplat (same value-space notes as other
 graphdeco PLYs).
 
-Shots: none in this pack.
+Shots: shots/01.png — desktop Vulkan headless still (documentation only;
+model not shipped).

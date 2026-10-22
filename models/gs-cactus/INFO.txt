@@ -17,4 +17,5 @@ Where to get them
 
 Prefer .glb for glTF/Y-up tests; .ply for Assimp graphdeco → KHR value conversion.
 
-Shots: none in this pack (upstream screenshot stays in the ZIP).
+Shots: shots/01.png — desktop Vulkan headless still (documentation only;
+model not shipped). Upstream ZIP also has its own SCREENSHOT.png.

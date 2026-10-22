@@ -20,4 +20,5 @@ Format notes
 Load: Assimp PLY + aiGetGaussianSplat; prefer raw import so Join does not
 desync verts from splat counts.
 
-Shots: none in this pack.
+Shots: shots/01.png — desktop Vulkan headless still (documentation only;
+model not shipped).
