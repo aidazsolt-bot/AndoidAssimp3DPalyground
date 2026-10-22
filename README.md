@@ -1,39 +1,54 @@
 # Android Assimp 3D Playground — Models
 
-Public sample pack of **Earth**, **Moon**, **SciFi orb**, **ClockSample**, and a
-**BusterDrone** reference entry (docs + shots only — glTF not redistributed)
+Public sample pack of **Earth**, **Moon**, **SciFi orb**, **ClockSample**, a
+**BusterDrone** reference entry (docs + shots only — glTF not redistributed),
+and **Gaussian splat** reference entries (docs + URLs — PLY/GLB not redistributed)
 for Assimp-based viewers and Android / Vulkan playgrounds.
 
-Each local mesh model ships as **Wavefront OBJ + MTL** and **Discreet 3DS**, with
-maps / textures where applicable, plus a short `INFO.txt`. BusterDrone is
-**link-only** (CC BY-NC upstream).
+Each classic mesh model ships as **Wavefront OBJ + MTL** and **Discreet 3DS**, with
+maps / textures where applicable, plus a short `INFO.txt`. BusterDrone and all
+`gs-*` Gaussian folders are **link-only** (fetch upstream; see each `INFO.txt`).
 
 ## Layout
 
 ```
 models/
-  earth/          Earth globe — albedo, bump, normal, specular + shots/
-  moon/           Moon globe — NASA SVS CGI Moon Kit maps + shots/
-  scifi-orb/      Multi-material sci-fi orb (materials only) + shots/
-  clock-sample/   POV clock scene + moon prop + shots/
-  buster-drone/   INFO + shots only — glTF from Filament / Sketchfab (CC BY-NC)
+  earth/              Earth globe — albedo, bump, normal, specular + shots/
+  moon/               Moon globe — NASA SVS CGI Moon Kit maps + shots/
+  scifi-orb/          Multi-material sci-fi orb (materials only) + shots/
+  clock-sample/       POV clock scene + moon prop + shots/
+  buster-drone/       INFO + shots only — glTF from Filament / Sketchfab (CC BY-NC)
+  gs-garden-table/    INFO + URL — mip-NeRF 360 garden table PLY
+  gs-mesh-in-splats/  INFO + URL + still — KHR MeshInSplats.glb
+  gs-splats-in-mesh/  INFO + URL + still — KHR SplatsInMesh.glb
+  gs-rose/            INFO + URL — Rose.ply
+  gs-cactus/          INFO + URL — cactus KHR .glb / .ply (CC0 upstream)
 tools/
-  obj_to_3ds.py   Small OBJ→3DS helper used for Earth / Moon
+  obj_to_3ds.py       Small OBJ→3DS helper used for Earth / Moon
 ```
 
-| Model | OBJ / MTL | 3DS | Maps | Shots |
-|-------|-----------|-----|------|-------|
-| Earth | yes | yes | albedo, bump, normal, specular | [01](models/earth/shots/01.png) … [10](models/earth/shots/10.png) ([folder](models/earth/shots/)) |
-| Moon | yes | yes | albedo, bump, normal, specular | [01](models/moon/shots/01.png) … [10](models/moon/shots/10.png) ([folder](models/moon/shots/)) |
-| SciFi orb | yes | yes | none (Ka/Kd/Ks/Ke) | [01](models/scifi-orb/shots/01.png) … [10](models/scifi-orb/shots/10.png) ([folder](models/scifi-orb/shots/)) |
-| ClockSample | yes | yes | checker, stripe, Moon_* | [01](models/clock-sample/shots/01.png) … [10](models/clock-sample/shots/10.png) ([folder](models/clock-sample/shots/)) |
-| BusterDrone | **no** (link) | **no** | PBR MR upstream | [01](models/buster-drone/shots/01.png) … [10](models/buster-drone/shots/10.png) ([folder](models/buster-drone/shots/)) |
+| Model | Formats | Maps | Shots |
+|-------|---------|------|-------|
+| Earth | OBJ/MTL, 3DS | albedo, bump, normal, specular | [01](models/earth/shots/01.png) … [10](models/earth/shots/10.png) ([folder](models/earth/shots/)) |
+| Moon | OBJ/MTL, 3DS | albedo, bump, normal, specular | [01](models/moon/shots/01.png) … [10](models/moon/shots/10.png) ([folder](models/moon/shots/)) |
+| SciFi orb | OBJ/MTL, 3DS | none (Ka/Kd/Ks/Ke) | [01](models/scifi-orb/shots/01.png) … [10](models/scifi-orb/shots/10.png) ([folder](models/scifi-orb/shots/)) |
+| ClockSample | OBJ/MTL, 3DS | checker, stripe, Moon_* | [01](models/clock-sample/shots/01.png) … [10](models/clock-sample/shots/10.png) ([folder](models/clock-sample/shots/)) |
+| BusterDrone | **no** (link) | PBR MR upstream | [01](models/buster-drone/shots/01.png) … [10](models/buster-drone/shots/10.png) ([folder](models/buster-drone/shots/)) |
+| gs-garden-table | **no** (link) | — | — |
+| gs-mesh-in-splats | **no** (link) | — | [01](models/gs-mesh-in-splats/shots/01.png) |
+| gs-splats-in-mesh | **no** (link) | — | [01](models/gs-splats-in-mesh/shots/01.png) |
+| gs-rose | **no** (link) | — | — |
+| gs-cactus | **no** (link) | — | — |
 
 ### Orbit stills (representative)
 
 | Earth | Moon | SciFi orb | ClockSample | BusterDrone |
 |-------|------|-----------|-------------|-------------|
 | [![Earth](models/earth/shots/05.png)](models/earth/shots/) | [![Moon](models/moon/shots/05.png)](models/moon/shots/) | [![SciFi](models/scifi-orb/shots/05.png)](models/scifi-orb/shots/) | [![Clock](models/clock-sample/shots/02.png)](models/clock-sample/shots/) | [![Buster](models/buster-drone/shots/04.png)](models/buster-drone/shots/) |
+
+| MeshInSplats | SplatsInMesh |
+|--------------|--------------|
+| [![MeshInSplats](models/gs-mesh-in-splats/shots/01.png)](models/gs-mesh-in-splats/shots/) | [![SplatsInMesh](models/gs-splats-in-mesh/shots/01.png)](models/gs-splats-in-mesh/shots/) |
 
 Each model has **10** emulator screenshots (`shots/01.png`–`10.png`) from the
 Vulkan SceneViewer (orbit auto-spin). How they were captured — and that this
@@ -50,6 +65,9 @@ pack grew out of an **AI-assisted** Android/Assimp lighting workflow — is unde
 4. Read `models/<name>/INFO.txt` for map meanings and usage tips.
 5. **BusterDrone:** fetch `scene.gltf` from Filament (see
    `models/buster-drone/INFO.txt`) — not included here.
+6. **Gaussians:** fetch the files named in `models/gs-*/INFO.txt`, then load with
+   an Assimp build that exposes `aiGetGaussianSplat`. Prefer raw import for PLY
+   so Join does not desync mesh verts from splat counts.
 
 ### Recommended load flags (Assimp-style)
 
@@ -58,6 +76,8 @@ pack grew out of an **AI-assisted** Android/Assimp lighting workflow — is unde
   height and specular maps are present for Earth, Moon, and ClockSample’s moon.
 - glTF (BusterDrone): glTF importer + Draco (or decode first);
   `aiProcess_PreTransformVertices`; metallic-roughness shading (not Blinn-only).
+- Gaussian PLY / KHR GLB: Gaussian sidecar API; do **not** invent upright axis
+  remaps in Assimp — host may convert RDF→RUB when targeting Y-up viewers.
 
 ## How the shots were made
 
@@ -101,6 +121,8 @@ themselves).
   [ATTRIBUTION.md](ATTRIBUTION.md).
 - **BusterDrone** mesh/textures: **CC BY-NC** (not in this repo) — see
   `models/buster-drone/INFO.txt` and [ATTRIBUTION.md](ATTRIBUTION.md).
+- **Gaussian samples (link-only):** see each `models/gs-*/INFO.txt` and
+  [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Model notes (short)
 
@@ -118,6 +140,15 @@ a soft PD-authored regolith specular. See `models/moon/INFO.txt`.
 **BusterDrone** — Filament / Sketchfab glTF (PBR, optional Draco). Docs + orbit
 stills only here; download the assets from Google’s Filament tree. Animation
 not shown in stills. See `models/buster-drone/INFO.txt`.
+
+**gs-garden-table** — URL for Open3D / mip-NeRF 360 garden crop PLY (not shipped).
+
+**gs-mesh-in-splats / gs-splats-in-mesh** — URLs for javagl KHR mesh+splat GLBs
+plus one desktop still each (docs only).
+
+**gs-rose** — URL / path hint for Rose.ply (not shipped).
+
+**gs-cactus** — URL for CC0 cactus KHR `.glb` / `.ply` ZIP (not shipped).
 
 ## Regenerating Earth / Moon `.3DS`
 

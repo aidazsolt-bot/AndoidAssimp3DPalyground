@@ -1,0 +1,23 @@
+Gaussian PLY — mip-NeRF 360 garden (table crop) — links only
+============================================================
+This playground folder does **not** redistribute the PLY (large; third-party
+capture). Fetch it yourself and keep the basename next to your loader.
+
+Expected file
+  mipnerf360_garden_crop_table.ply  (~183 MB, ~773k graphdeco 3DGS splats)
+
+Where to get it
+  Open3D gaussian-splatting tutorial (download set / open3d_downloads 3dgs-1):
+    https://www.open3d.org/docs/latest/tutorial/visualization/gaussian_splatting.html
+  Lab mirror often lives under:
+    ~/3D-Objekte/open3d_3dgs_example/mipnerf360_garden_crop_table.ply
+
+Format notes
+  graphdeco / INRIA PLY (opacity logit, scale log, rot wxyz). Assimp converts
+  to KHR value space; positions stay as authored (often COLMAP Y-down / RDF).
+  Y-up viewers may need an explicit upright bridge — Assimp does not invent it.
+
+Load: Assimp PLY + aiGetGaussianSplat; prefer raw import so Join does not
+desync verts from splat counts.
+
+Shots: none in this pack.

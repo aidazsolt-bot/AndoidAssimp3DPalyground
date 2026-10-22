@@ -1,0 +1,20 @@
+KHR gaussian + mesh mix — MeshInSplats — links only
+===================================================
+This playground folder does **not** redistribute the GLB. Fetch from the
+javagl / Khronos test ZIP.
+
+Expected file
+  MeshInSplats.glb
+  POINTS + KHR_gaussian_splatting in [0,10]^3 plus triangle cube node scale 5
+  (world [0,5]^3) — smaller mesh in a corner of the splat AABB.
+
+Where to get it
+  ZIP (Khronos glTF issue #2562 attachments):
+    https://github.com/user-attachments/files/28266442/gltf-splat-examples-2025-05-26-animation.zip
+  Discussion:
+    https://github.com/KhronosGroup/glTF/issues/2562
+
+Load: Assimp glTF2 + aiGetGaussianSplat. Soft-splat SSBOs need the same Assimp
+AABB normalize (skinCenter/skinScale) as mesh draws for orbit framing.
+
+Shots: shots/01.png — our desktop Vulkan still (documentation only).

@@ -67,6 +67,38 @@ you redistribute those files yourself.
 
 ---
 
+## Gaussian splat samples (`models/gs-*/`) — **links only**
+
+Model bytes (PLY / GLB) are **not** shipped in this repository. Each folder has
+`INFO.txt` with expected filenames and download URLs. `INFO.txt` and any
+playground stills are CC0 documentation.
+
+### gs-garden-table
+
+| Item | Source / URL | Terms |
+|------|--------------|--------|
+| `mipnerf360_garden_crop_table.ply` (fetch) | Open3D tutorial / `open3d_downloads` 3dgs-1 — https://www.open3d.org/docs/latest/tutorial/visualization/gaussian_splatting.html | Credit Open3D / capture authors when you redistribute the PLY yourself |
+
+### gs-mesh-in-splats / gs-splats-in-mesh
+
+| Item | Source / URL | Terms |
+|------|--------------|--------|
+| `MeshInSplats.glb`, `SplatsInMesh.glb` (fetch) | https://github.com/user-attachments/files/28266442/gltf-splat-examples-2025-05-26-animation.zip — issue [#2562](https://github.com/KhronosGroup/glTF/issues/2562) | Spec test assets upstream; our `INFO.txt` / stills: CC0 docs |
+
+### gs-rose
+
+| Item | Source / URL | Terms |
+|------|--------------|--------|
+| `Rose.ply` (fetch) | VVE / philippo24 bachelorarbeit `assets/gaussian-splatting/Rose.ply` | Engine tree **MIT**; attribute that project if you use the asset |
+
+### gs-cactus
+
+| Item | Source / URL | Terms |
+|------|--------------|--------|
+| cactus `.glb` / `.ply` (fetch) | https://javagl.de/splats/cactus_splat3_30kSteps_142k_splats-2026-04-09.zip — https://note.com/steam_studio/n/ne9736d94f162 | Upstream **CC0**; not mirrored here |
+
+---
+
 ## Suggested credit line
 
 > Earth / Moon textures include NASA public-domain imagery (Blue Marble /
@@ -74,3 +106,5 @@ you redistribute those files yourself.
 > Meshes and authored materials: CC0 1.0.
 > BusterDrone (if used): CC BY-NC — LaVADraGoN / Sketchfab via Filament
 > `third_party/models/BusterDrone`; not shipped in this pack.
+> Gaussian samples: link-only (Open3D garden, javagl KHR mesh+splat ZIP,
+> CC0 cactus ZIP, Rose from VVE/philippo24) — see models/gs-*/INFO.txt.

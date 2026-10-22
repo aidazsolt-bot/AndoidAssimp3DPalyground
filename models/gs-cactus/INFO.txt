@@ -1,0 +1,20 @@
+Gaussian cactus — KHR glTF + PLY — links only (CC0 upstream)
+============================================================
+This playground folder does **not** redistribute the model bytes. Upstream is
+CC0; we still keep only URLs here (size + pack policy).
+
+Expected files
+  cactus_splat3_30kSteps_142k_splats.glb  (~43 MB, KHR_gaussian_splatting)
+  cactus_splat3_30kSteps_142k_splats.ply  (~32 MB, graphdeco-style source)
+
+Where to get them
+  ZIP:
+    https://javagl.de/splats/cactus_splat3_30kSteps_142k_splats-2026-04-09.zip
+  Original note:
+    https://note.com/steam_studio/n/ne9736d94f162
+  Khronos discussion:
+    https://github.com/KhronosGroup/glTF/issues/2562
+
+Prefer .glb for glTF/Y-up tests; .ply for Assimp graphdeco → KHR value conversion.
+
+Shots: none in this pack (upstream screenshot stays in the ZIP).

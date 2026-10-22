@@ -1,0 +1,19 @@
+Gaussian PLY — Rose — links only
+================================
+This playground folder does **not** redistribute Rose.ply. Fetch from the
+thesis / VVE demo asset tree.
+
+Expected file
+  Rose.ply  (~2.1 MB, graphdeco-style 3DGS)
+
+Where to get it
+  philippo24 bachelorarbeit / VVE gaussian-splatting cubemap lighting demo:
+    assets/gaussian-splatting/Rose.ply
+  Local lab mirror (if present):
+    ~/3D-Objekte/philippo24_bachelorarbeit.git/assets/gaussian-splatting/Rose.ply
+  Engine LICENSE is MIT; attribute that project when you use the asset.
+
+Load: Assimp PLY + aiGetGaussianSplat (same value-space notes as other
+graphdeco PLYs).
+
+Shots: none in this pack.

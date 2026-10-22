@@ -1,0 +1,18 @@
+KHR gaussian + mesh mix — SplatsInMesh — links only
+==================================================
+This playground folder does **not** redistribute the GLB. Same ZIP as
+gs-mesh-in-splats.
+
+Expected file
+  SplatsInMesh.glb
+  Same splat field [0,10]^3; triangle cube node scale 20 (world [0,20]^3) —
+  splats in a corner of a larger mesh (inverse of MeshInSplats).
+
+Where to get it
+  https://github.com/user-attachments/files/28266442/gltf-splat-examples-2025-05-26-animation.zip
+  https://github.com/KhronosGroup/glTF/issues/2562
+
+If only the mesh is AABB-framed and splats stay raw, the cube looks tiny beside
+an off-center splat cloud — that is a host framing bug, not this asset's intent.
+
+Shots: shots/01.png — our desktop Vulkan still (documentation only).
